@@ -27,7 +27,6 @@
 					<a href="#">inicio</a>
 					<a href="#">inicio</a>
 					<a href="#">inicio</a>
-					<a href="#">inicio</a>
 				</div>
 				<div class="hamburger">
 					<i class="fas fa-bars"></i>
