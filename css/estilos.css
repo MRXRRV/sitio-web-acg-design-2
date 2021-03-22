@@ -1,0 +1,613 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans serif; 
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #1d273b;
+	font-weight: 300;
+}
+/* siempre maquetar el html con contenedores */
+.contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto; /* centra todo el contenido del contenedor*/
+	overflow: hidden;
+}
+
+.contenedor1{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto; /* centra todo el contenido del contenedor*/
+	overflow: hidden;
+	padding: 60px 0;
+}
+
+h1{
+	font-size: 50px;
+}
+
+/* header */
+
+/* se crea un elemento ficticio para que el 
+positon fixed no se interponga en el contenido es de
+80px igual que el tamaño del nav */
+
+header::before{
+	content: "";
+	display: block;
+	margin-bottom: 80px;
+}
+
+
+
+/* hace el efecto del borde sombredo con border bottom y box shadow en el header */
+nav{
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	border-bottom: 1px solid transparent;
+	box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+	transition: ease-in-out 0.5s;
+	position: fixed; /*fija el menu*/
+	/*estos dos elementos ayudan a que se ponga hasta arriba el header*/
+	top: 0;
+	z-index: 100;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between; /* separa los contenidos del menu uno alado del otro */
+	height: 80px;
+	width: 100%;
+	/* centrar verticalmente */
+	align-items: center;
+	padding: 0 40px;
+}
+
+.nav .logo{
+	height: 80px;
+}
+
+.nav .logo img{
+	height: 100%;
+	vertical-align: top;
+}
+
+.enlaces-header{
+	font-weight: 300;
+	/*se agrega la transicion para que se vea efecto del circulo*/
+	transition: ease-in-out 0.5s;
+}
+
+/* da estilos a los enlaces <a>  */
+.nav .enlaces-header a{
+	color: #5D6678;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+.hamburger{
+	width: 80px;
+	height: 80px;
+	display: none;
+	text-align: center;
+	z-index: 100;
+	cursor: pointer;
+	transition: color 0.5 ease-in;
+}
+/* se va especificamente a la etiqueta i */
+.hamburger > i{
+	font-size: 25px;
+	line-height: 80px;
+}
+.contenido-header{
+	width: 100%;
+	height: 600px;
+	/* estas 3 propiedades ajustan el contenido
+	en la imagen y el texto de modo que se centre */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contenido-header>img{
+	width: 550px;
+	animation: ease-in animat 1s;
+}
+
+/* 	se crea como una funcion de animacion con css y
+se usa en animation con la imagen woooow */
+@keyframes animat{
+	0%{
+		transform: scale(0);
+	}100%{
+		transform: scale(1);
+	}
+}
+
+.textos-header{
+	margin: 0 0 0 30px;
+}
+.contenido-header p{
+	font-weight: 100;
+	margin-top: 14px;
+	color:#5d6678;
+}
+/* 	para el boton se agrega el inline-block
+y los elementos en linea como la etiqueta <a> no tienen
+propiedades de margenes pero al indicar que es un elemento 
+inline-block ya tiene propiedades de bloque */
+.contenido-header a{
+	margin: 28px 0 0 0;
+	width: 130px;
+	display: inline-block;
+	background: #1fde82;
+	text-align: center;
+	color: #fff;
+	padding: 12px 0;
+	text-decoration: none;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 	14px;
+	border-radius: 5px;
+	box-shadow: 0 8px 32px rgba(31,322,130,.46);
+}
+.titulo{
+	font-size: 50px;
+}
+
+/* 	about us */
+
+.about-us{
+	background: #f2f2f2;
+}
+
+/* estilo al contenedor de articulo con displey:flexbox */
+
+.contenedor-articulo{
+	display: flex; 
+	flex-wrap: wrap; /*aqui el contenido se ajusta al tamaño de las cartas que miden 29% en la clase articulo en y si no se baja es como cuadricula*/
+	margin-top: 60px;
+	justify-content: space-around; /*aqui se acomoda todo muy bien en el contendor*/
+
+}
+
+/* 	magia del flexbox */
+/* 	estilo a los articulos */
+.articulo{
+	width: 29%;
+	background: #fff;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	padding: 45px 30px 60px 30px;
+	transition: 0.5s;
+}
+.articulo:hover{
+	box-shadow: 0 4px 10px rgba(17,29,48,.26);
+}
+/* 	estilo a los i son iconos y clas articulo */
+.articulo>i{
+	font-size: 30px;
+	color: #fff;
+	background:#1fde82;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	padding-top: 20px;
+	border-radius: 50%;
+	box-shadow: 0 8px 32px rgba(31,322,130,.46);
+}
+
+.articulo>h3{
+	font-size: 24px;
+	margin-top: 30px;
+}
+
+.articulo>p{
+	font-weight: 100;
+	color: #5d6678;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.articulo>a{
+	color: #5d6678;
+	font-weight: 400;
+	text-decoration: none;
+}
+.articulo>a:hover{
+	color: #1fde82;
+	transition: color .5s;
+}
+
+/* questions */
+.questions{
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.questions>img{
+	width: 550px;
+}
+
+
+.textos-questions{
+	margin: 0 0 0 30px;
+}
+.textos-questions p{
+	font-weight: 100;
+	margin-top: 14px;
+	color:#5d6678;
+}
+/* 	para el boton se agrega el inline-block
+y los elementos en linea como la etiqueta <a> no tienen
+propiedades de margenes pero al indicar que es un elemento 
+inline-block ya tiene propiedades de bloque */
+.textos-questions a{
+	margin: 28px 0 0 0;
+	width: 130px;
+	display: inline-block;
+	background: #1fde82;
+	text-align: center;
+	color: #fff;
+	padding: 12px 0;
+	text-decoration: none;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 	14px;
+	border-radius: 5px;
+	box-shadow: 0 8px 32px rgba(31,322,130,.46);
+}
+
+.results{
+	background:#2270ff;
+	padding-top: 30px;
+}
+
+/* aqui se agrega el contenedor1 para que le de un pading de 60px a todo el contenido y se ve mejor */
+
+.conten-results{
+	display: flex; /*se ponen los dos en el mismo lado*/
+	justify-content: space-evenly; /* y despues se pone un section a lado del otro*/
+}
+
+/* divide el espacio de esa seccion en 60% los 4 */
+.numbers{
+	width: 60%; /*lo que mide de un lado*/
+	display: flex;
+	/*estas dos propiedades se unen para dar el efecto de la cuadricula*/
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+/* en esta propiedad se hace la cuadricula */
+.numbers .number{
+	width: 45%;
+	background: rgba(255,255,255,.2);/*Genera la trnasparencia*/
+	color: #fff;
+	border-radius: 10px;
+	padding: 40px 35px;
+	margin-bottom: 20px;
+}
+
+.numbers .number h4{
+	color: #fff;
+	font-size: 50px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.numbers .number p{
+	color: #f2f5fc;
+	font-weight: 300;
+}
+
+/* otra caja de texto */
+
+.results-text{
+	width: 37%; /*lo que mide del resto del contenedor para que de 100%*/
+}
+
+.results-text h4{
+	color: #fff;
+	font-size: 40px;
+}
+
+.results-text p{
+	color: #fff;
+	font-weight: 300;
+	margin: 20px 0;
+}
+
+/* apunta directamente al hijo */
+.results-text>a{
+	color: #fff;
+	text-decoration: none;
+	display: inline-block; /*se asigna propiedad para poder dar propuedades de padding margin etc*/
+	border: 1px solid #fff;
+	padding: 10px 0;
+	width: 120px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+/* services */
+
+.service{
+	display: flex; /*para poner un contenedor a lado del otro estas 2 propiedades*/
+	justify-content: space-between;
+}
+
+.service>img{
+	width: 500px;
+}
+
+/* da estilo a la caja de texto */
+.box-skills{
+	margin: 30px 30px 0 0;
+}
+
+/* se da estilo color gris en las cajitas del texto */
+.box-skills h4{
+	font-size: 24px;
+	background: #f2f2f2;
+	width: 350px;
+	border-radius: 6px;
+	padding: 10px 0 10px 15px;
+	margin-bottom: 10px;
+}
+
+.box-skills i{
+	color: #1fde82;
+	font-size: 20px;
+}
+
+/* footer */
+
+/* estilo al espaciado del footer */
+footer{
+	background: #f2f2f2;
+	padding: 60px 0;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: auto;
+}
+
+.part-footer{
+	width:20%;
+	text-align: center;
+}
+
+.part-footer h4{
+	color: #1d273b;
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.part-footer a{
+	display: block;
+	text-decoration: none;
+	color: #5d6678;
+	font-weight: 300;
+	transition: color .3s ease-in-out; /*efecto pequeño de transiscion al momento de pasar el mouse*/ 
+	margin-bottom: 10px;
+}
+
+.part-footer a:hover{
+	color: #1fde82;
+}
+
+.part-footer img{
+	width: 70%;
+}
+
+/* redes sociales */
+
+.social-media i{
+	font-size: 20px;
+	display: inline-block;
+	color: #adb6c7;
+	border: 1px solid #adb6c7;
+	border-radius: 50%; /*se hace un borde en forma de circulo y se agrega las propiedades de width y height para que se pueda mostrar*/
+	width: 38px;
+	height: 38px;
+	line-height: 36px; /*se centra el icono*/
+	cursor: pointer;
+	margin-top: 20px;
+	text-align: center;
+	transition: all ease-in-out .3s;
+	margin-right: 5px;
+}
+/* color al pasar el mouse */
+.social-media i:hover{
+	color: #fff;
+	background-color: #1fde82;
+	border-color: #1fde82;
+}
+
+@media screen and (max-width: 800px){
+	.titulo{
+		font-size: 45px;
+	}
+	/* agrega el contenido uno abajo del otro imagen y contenido */
+	.contenido-header{
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 720px;
+	}
+	.contenido-header>img{
+		width: 400px;
+
+	}
+	.textos-header{
+		margin: 0;
+	}
+
+	/* about us */
+
+	/* dos articulos por columna */
+	.articulo{
+		width: 45%;
+	}
+	/* questions */
+
+	/* agrega el contenido uno abajo del otro imagen y contenido */
+	.questions{
+		height: 720px;
+		justify-content: space-evenly;
+		flex-direction: column;
+	}
+	.questions>img{
+		width: 400px;
+	}
+
+	/* results */
+
+	.conten-results{
+		/*pone el contenido uno arriba del otro*/
+		flex-direction: column-reverse;
+	}
+	.results-text>a{
+		margin-bottom: 60px;
+	}
+	.numbers{
+		width: 100%;
+	}
+	.results-text{
+		width: 100%;
+	}
+
+	/* services */
+	.service{
+		/* acomoda el contenido en columna uno abajo del otro */
+		flex-direction: column-reverse;
+		align-items: center;
+		/* acomoda el contenido en columna uno abajo del otro */
+	}
+	.box-skills{
+		margin: 0 0 40px 0;
+	}
+	.box-skills h4{
+		width: 500px;
+	}
+	.service>img{
+		width: 400px;
+	}
+
+	/* footer */
+	footer{
+		justify-content: space-evenly;
+	}
+	.part-footer{
+		width: 40%;
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (max-width:600px){
+	.titulo{
+		font-size: 35px;
+	}
+
+	h1{
+		font-size: 40px;
+	}
+	.contenido-header{
+		height: 650px;
+	}
+	.nav{
+		padding: 0 10px;
+	}
+	.contenido-header>img{
+		width: 200px;
+	}
+
+	/* menu */
+	.enlaces-header{
+		position: fixed;
+
+		background: #2c3e50;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		/*para acomodar a la derecha*/
+		top: 0;
+		right: 0;
+
+		width: 100%;
+		height: 100vh;
+
+		/*acomoda uno a lado del otro*/
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		/*indica que ocupe todo el contenedor*/
+		justify-content: space-evenly;
+
+		/*se agrega esta propiedad para que el menu tenga efecto circular asi esta oculto*/
+		clip-path: circle(0.0% at 100% 0);
+	}
+
+	/* nueva clase para menu que va a interactuar con js */
+	.nav .menudos{
+		/*se agrega esta propiedad para que el menu tenga efecto circular asi esta visible en esta clase*/
+		-webkit-clip-path: circle(150% at 100% 0);
+		clip-path: circle(150% at 100% 0);
+	}
+	.nav .enlaces-header a{
+		color: #fff;
+	}
+	/* muestra el boton del menu de navegacion */
+	.hamburger{
+		display: block;
+	}
+
+	/* about-us */
+
+	/* un articulo por fila */
+	.articulo{
+		width: 95%;
+	}
+
+	/* questions */
+
+	.questions>img{
+		width: 200px;
+	}
+
+	/* results */
+
+	/* una fila por numero */
+	.numbers .number{
+		width: 95%;
+	}
+
+	.results-text h4{
+		font-size: 35px;
+	}
+
+	/* service */
+	.service>img{
+		width: 200px;
+	}
+	.box-skills h4{
+		width: 100%;
+	}
+
+	/* footer */
+	.part-footer{
+		width: 95%;
+		margin-bottom: 40px;
+	}
+
+}
