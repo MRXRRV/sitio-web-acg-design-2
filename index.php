@@ -20,14 +20,20 @@
 				<div class="logo">
 					<img src="img/logo-jordan-alexander.png" alt="">
 				</div>
+				<!--<div class="enlaces-header">
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+					<a href="#">inicio</a>
+				</div>-->
 				<div class="enlaces-header">
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
+					<?php $arr = ['inicio','inicio','inicio','inicio','inicio'];
+					for ($i=0; $i <count($arr); $i++) { ?>
+						<a href="#"><?php print $arr[$i];?></a>
+					<?php } ?>
 				</div>
 				<div class="hamburger">
 					<i class="fas fa-bars"></i>
