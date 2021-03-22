@@ -20,15 +20,6 @@
 				<div class="logo">
 					<img src="img/logo-jordan-alexander.png" alt="">
 				</div>
-				<!--<div class="enlaces-header">
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-					<a href="#">inicio</a>
-				</div>-->
 				<div class="enlaces-header">
 					<?php $arr = ['inicio','inicio','inicio','inicio','inicio'];
 					for ($i=0; $i <count($arr); $i++) { ?>
