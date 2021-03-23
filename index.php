@@ -131,28 +131,29 @@
 		</div>
 	</section>
 	<footer>
-		<div class="part-footer">
+		<div class="part-footer" data-aos="zoom-in-right">
 			<img src="img/logo-jordan-alexander.png" alt="">
 		</div>
-		<div class="part-footer">
+		<div class="part-footer" data-aos="zoom-in-right">
 			<h4>Servicios</h4>
 			<a href="#">services 1</a>
 			<a href="#">services 2</a>
 			<a href="#">services 3</a>
 		</div>
-		<div class="part-footer">
+		<div class="part-footer" data-aos="zoom-in-left">
 			<h4>Acerca de</h4>
 			<a href="#">about 1</a>
 			<a href="#">about 2</a>
 			<a href="#">about 3</a>
 		</div>
-		<div class="part-footer">
+		<div class="part-footer" data-aos="zoom-in-left">
 			<h4>Redes sociales</h4>
 			<div class="social-media">
 				<i class="fab fa-facebook-f"></i>
 				<i class="fab fa-twitter"></i>
 				<i class="fab fa-instagram"></i>
 				<i class="fab fa-youtube"></i>
+				<i class="fab fa-github"></i>
 			</div>
 		</div>
 	</footer>

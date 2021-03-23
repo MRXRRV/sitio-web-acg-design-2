@@ -387,10 +387,18 @@ footer{
 }
 
 .part-footer h4{
+	padding-bottom: 10px;
+	display: inline-block;
+	border-bottom: 2px solid #2270ff;
 	color: #1d273b;
 	font-size: 20px;
 	font-weight: 400;
 	margin-bottom: 30px;
+}
+
+.part-footer h4:hover{
+	color: #1fde82;
+
 }
 
 .part-footer a{
