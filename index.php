@@ -46,42 +46,22 @@
 		<div class="contenedor1">
 			<h2 class="titulo">We provide a wide range</h2>
 			<div class="contenedor-articulo">
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-pen-fancy"></i>
-					<h3>Graphic Design</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-code"></i>
-					<h3>Web Design</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-chart-pie"></i>
-					<h3>Video Production</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-comments"></i>
-					<h3>SEO</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-chart-bar"></i>
-					<h3>Marketing</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
-				<div class="articulo" data-aos="zoom-in-right">
-					<i class="fas fa-cog"></i>
-					<h3>Inphograpics</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!</p>
-					<a href="" ref="#">read More ---></a>
-				</div>
+				<?php $Info['titulos'] = ['Graphic Design','Web Design','Video Production','SEO','Marketing','Inphograpics'];
+
+					$Info['desc'] = ['Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!','Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!','Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!','Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!','Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!','Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Adipisci ipsa temporibus architecto officia delectus amet!'];
+					$Info['name_icon'] = ['fas fa-pen-fancy','fas fa-code','fas fa-chart-pie','fas fa-comments','fas fa-chart-bar','fas fa-cog'];
+				?>
+
+				<?php  
+				for ($i=0; $i <count($Info['titulos']) ; $i++) { ?>
+					
+					<div class="articulo" data-aos="zoom-in-right">
+						<i class="<?= $Info['name_icon'][$i]; ?>"></i>
+						<h3><?= $Info['titulos'][$i]; ?></h3>
+						<p><?= $Info['desc'][$i]; ?></p>
+						<a href="" ref="#">read More ---></a>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 	</section>
